@@ -77,6 +77,27 @@ user-select: none;
 var message="NoRightClicking"; function defeatIE() {if (document.all) {(message);return false;}} function defeatNS(e) {if (document.layers||(document.getElementById&&!document.all)) { if (e.which==2||e.which==3) {(message);return false;}}} if (document.layers) {document.captureEvents(Event.MOUSEDOWN);document.onmousedown=defeatNS;} else{document.onmouseup=defeatNS;document.oncontextmenu=defeatIE;} document.oncontextmenu=new Function("return false")
 //]]>
 </script>
+	<script type="text/javascript">
+
+var txt="Nguyễn Hữu Thắng";
+
+var espera=150;
+
+var refresco=null;
+
+function rotulo_title() {
+
+document.title=txt;
+
+txt=txt.substring(1,txt.length)+txt.charAt(0);
+
+refresco=setTimeout("rotulo_title()",espera);
+
+}
+
+rotulo_title();
+
+</script>
 	</head>
 	<!-- Bắt đầu phần hiển thị -->
 	<body onkeydown="return false">
